@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+
   <meta charset="utf-8">
   <title>ArEggHunt</title>
   <base href="/">
@@ -8,6 +12,24 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+
+  <a-scene embedded arjs='sourceType: webcam;'>
+    <a-assets>
+
+      <a-asset-item id="catobj" src="/assets/3DMarker/Cat.obj"></a-asset-item>
+      <a-asset-item id="catmtl" src="/assets/3DMarker/Cat.mtl"></a-asset-item>
+  
+    </a-assets>
+    <a-marker preset="hiro">
+      <a-entity 
+      obj-model="
+      obj: #catobj; 
+      mtl: #catmtl">
+      </a-entity>
+    <a-box position='0 1 0' material='color: green;'>
+    </a-box>
+    </a-marker>
+  </a-scene>
   <app-root></app-root>
 </body>
 </html>
