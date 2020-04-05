@@ -1,0 +1,71 @@
+$font-family: Helvetica, sans-serif;
+$text-color: white;
+$primary-button-bg-color: green;
+$secondary-button-bg-color: red;
+
+.landing-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+
+    .landing-header-container {
+        text-align: center;
+
+        .landing-title {
+            margin-top: 1em;
+            color: $text-color;
+            font-family: $font-family;
+        }
+    }
+
+    .landing-footer-container {
+        text-align: center;
+        height: 2em;
+
+        #github-link {
+            color: $text-color;
+            font-family: $font-family;
+        }
+    }
+
+    .landing-main-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        text-align: center;
+        
+        .landing-button-container {
+            width: 100%;
+            text-align: center;
+
+            .landing-primary-button {
+                display: block;
+                text-decoration: none;
+
+                p {
+                    padding: 1em;
+                    margin: 0 20% 0 20%;
+                    background-color: $primary-button-bg-color;
+                    color: $text-color;
+                    font-family: $font-family;
+                }
+            }
+        
+            .landing-secondary-button {
+                display: block;
+                text-decoration: none;
+
+                p {
+                    padding: 1em;
+                    margin: 0 20% 0 20%;
+                    background-color: $secondary-button-bg-color;
+                    color: $text-color;
+                    font-family: $font-family;
+                }
+            }
+        }
+    }
+}
