@@ -12,15 +12,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Use node v10.15.3
+    - name: Specify node v10.15.3
       uses: actions/setup-node@v1
       with:
         node-version: 10.15.3
     - name: Install dependencies
       run: npm install
-    - name: Build
+    - name: Build project
       run: npm run build --prod
-    - name: Test
-      run: npm test 
-    - name: E2E
-      run: npm run e2e 
